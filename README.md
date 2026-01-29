@@ -349,29 +349,6 @@ Test Loss: 0.4987
 Test Accuracy: 0.7234
 ```
 
-### Scheduled Drift Simulation
-
-The project includes a scheduled drift simulation that injects different types of drifts at specific rounds:
-
-1. **Feature Drift** (Round 50):
-   - Injects noise into input features
-   - Simulates changes in network traffic patterns
-   - Affects feature distributions
-
-2. **Concept Drift** (Round 100):
-   - Modifies feature-label relationships
-   - Simulates changes in traffic classification rules
-   - Affects model's decision boundaries
-
-3. **Label Drift** (Round 150):
-   - Changes label distribution
-   - Simulates shifts in traffic types
-   - Affects class balance
-
-4. **Combined Drift** (Round 200):
-   - Applies all drift types simultaneously
-   - Simulates complex real-world scenarios
-   - Tests model's robustness
 
 To run the scheduled drift simulation:
 
@@ -388,7 +365,7 @@ python examples/simulate_scheduled_drift.py \
 
 The simulation will:
 1. Train the model for 250 rounds
-2. Inject drifts at rounds 50, 100, 150, and 200
+2. Inject drifts
 3. Log training metrics and drift events
 4. Save the final model and drift history
 
