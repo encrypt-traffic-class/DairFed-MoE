@@ -47,7 +47,7 @@ cd dair-fedmoe
 
 2. Create and activate a conda environment:
 ```bash
-conda create -n dair-fedmoe python=3.8
+conda create -n dair-fedmoe python=3.8.0
 conda activate dair-fedmoe
 ```
 
