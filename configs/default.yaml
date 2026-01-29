@@ -1,0 +1,46 @@
+model:
+  # Transformer parameters
+  num_layers: 6
+  hidden_dim: 256
+  num_heads: 8
+  ff_expansion: 4
+  dropout: 0.1
+  
+  # MoE parameters
+  num_experts: 8
+  expert_dim: 512
+  aux_loss_weight: 0.01
+  
+  # Drift detection parameters
+  drift_window_size: 100
+  drift_threshold: 0.1
+  reference_update_rate: 0.1
+  
+  # Privacy parameters
+  dp_sensitivity: 1.0
+  dp_epsilon: 1.0
+  dp_delta: 1e-5
+  
+  # Training parameters
+  batch_size: 32
+  num_classes: 10  # Will be updated based on dataset
+
+training:
+  # Federated learning parameters
+  num_clients: 10
+  num_rounds: 250
+  learning_rate: 1e-3
+  
+  # PPO parameters
+  ppo_clip_ratio: 0.2
+  ppo_value_coef: 0.5
+  ppo_entropy_coef: 0.01
+  
+  # Reward weights
+  performance_weight: 0.4
+  drift_weight: 0.3
+  resource_weight: 0.3
+  
+  # Other parameters
+  seed: 42
+  device: "cuda"  # or "cpu" 
